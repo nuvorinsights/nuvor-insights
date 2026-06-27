@@ -20,11 +20,11 @@ export function SiteFooter() {
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a
-                  href="mailto:mohammed@nuvorinsights.com"
+                  href="mailto:contact@nuvorinsights.com"
                   className="flex items-center gap-2 text-white/80 transition-colors hover:text-white"
                 >
                   <Mail className="h-3.5 w-3.5 text-[color:var(--gold)]" />
-                  mohammed@nuvorinsights.com
+                  contact@nuvorinsights.com
                 </a>
               </li>
               <li>

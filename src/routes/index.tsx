@@ -677,10 +677,10 @@ function BookingSection() {
               <ArrowRight className="h-4 w-4 transition-transform duration-500 group-hover:translate-x-1" />
             </a>
             <a
-              href="mailto:mohammed@nuvorinsights.com"
+              href="mailto:contact@nuvorinsights.com"
               className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 px-8 py-4 text-sm font-medium text-white transition-all duration-500 hover:border-white/50 hover:bg-white/[0.04]"
             >
-              mohammed@nuvorinsights.com
+              contact@nuvorinsights.com
             </a>
           </div>
         </Reveal>
