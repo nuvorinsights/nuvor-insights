@@ -55,32 +55,44 @@ export function SiteNav() {
         </a>
 
         <nav className="hidden items-center gap-9 md:flex">
-          {NAV_LINKS.map((l) => (
-            <a
-              key={l.href}
-              href={l.href}
-              className={`link-underline text-sm font-medium transition-colors ${
-                active === l.href.slice(1)
-                  ? "text-[color:var(--navy)]"
-                  : "text-[color:var(--muted-foreground)] hover:text-[color:var(--navy)]"
-              }`}
-            >
-              {l.label}
-            </a>
-          ))}
+          {NAV_LINKS.map((l) => {
+            const isActive = active === l.href.slice(1);
+            const base = scrolled
+              ? isActive
+                ? "text-[color:var(--navy)]"
+                : "text-[color:var(--muted-foreground)] hover:text-[color:var(--navy)]"
+              : isActive
+                ? "text-white"
+                : "text-white/70 hover:text-white";
+            return (
+              <a
+                key={l.href}
+                href={l.href}
+                className={`link-underline text-sm font-medium transition-colors ${base}`}
+              >
+                {l.label}
+              </a>
+            );
+          })}
         </nav>
 
         <div className="hidden items-center gap-5 md:flex">
           <a
             href={PHONE_HREF}
-            className="flex items-center gap-2 text-sm font-medium text-[color:var(--navy)] transition-opacity hover:opacity-70"
+            className={`flex items-center gap-2 text-sm font-medium transition-opacity hover:opacity-70 ${
+              scrolled ? "text-[color:var(--navy)]" : "text-white"
+            }`}
           >
             <Phone className="h-3.5 w-3.5 text-[color:var(--gold)]" strokeWidth={2.25} />
             {PHONE}
           </a>
           <a
             href="#booking"
-            className="rounded-full bg-[color:var(--navy)] px-5 py-2.5 text-xs font-medium tracking-wide text-white transition-all duration-500 hover:bg-[color:var(--slate-rich)] hover:shadow-elegant"
+            className={`rounded-full px-5 py-2.5 text-xs font-medium tracking-wide transition-all duration-500 hover:shadow-elegant ${
+              scrolled
+                ? "bg-[color:var(--navy)] text-white hover:bg-[color:var(--slate-rich)]"
+                : "bg-white text-[color:var(--navy)] hover:bg-[color:var(--gold)]"
+            }`}
           >
             Book Discovery Call
           </a>
@@ -88,7 +100,7 @@ export function SiteNav() {
 
         <button
           aria-label="Toggle menu"
-          className="md:hidden text-[color:var(--navy)]"
+          className={`md:hidden ${scrolled ? "text-[color:var(--navy)]" : "text-white"}`}
           onClick={() => setOpen((v) => !v)}
         >
           {open ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
