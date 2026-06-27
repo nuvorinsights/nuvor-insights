@@ -51,7 +51,7 @@ export function SiteNav() {
     >
       <div className="container-px mx-auto flex h-16 max-w-7xl items-center justify-between md:h-20">
         <a href="#home" className="shrink-0">
-          <Logo />
+          <Logo variant={scrolled ? "dark" : "light"} />
         </a>
 
         <nav className="hidden items-center gap-9 md:flex">
