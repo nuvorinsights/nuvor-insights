@@ -77,19 +77,29 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "Lovable App" },
-      { name: "description", content: "Lovable Generated Project" },
-      { name: "author", content: "Lovable" },
-      { property: "og:title", content: "Lovable App" },
-      { property: "og:description", content: "Lovable Generated Project" },
+      { title: "Nuvor Insights — Executive Financial Intelligence for Agencies" },
+      {
+        name: "description",
+        content:
+          "Executive financial reporting, cash flow intelligence and strategic performance insights for agency leaders ready to scale.",
+      },
+      { name: "author", content: "Nuvor Insights" },
+      { property: "og:title", content: "Nuvor Insights — Executive Financial Intelligence" },
+      {
+        property: "og:description",
+        content:
+          "Financial intelligence for agencies ready to scale. Cash flow, performance and advisory for agency owners.",
+      },
       { property: "og:type", content: "website" },
-      { name: "twitter:card", content: "summary" },
-      { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
+      { rel: "stylesheet", href: appCss },
+      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       {
         rel: "stylesheet",
-        href: appCss,
+        href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500&family=Inter:wght@300;400;500;600;700&display=swap",
       },
     ],
   }),
