@@ -4,11 +4,10 @@ interface RevealProps {
   children: ReactNode;
   delay?: number;
   className?: string;
-  as?: "div" | "section" | "article" | "li" | "header" | "footer";
 }
 
-export function Reveal({ children, delay = 0, className = "", as: Tag = "div" }: RevealProps) {
-  const ref = useRef<HTMLDivElement>(null);
+export function Reveal({ children, delay = 0, className = "" }: RevealProps) {
+  const ref = useRef<HTMLDivElement | null>(null);
   const [visible, setVisible] = useState(false);
 
   useEffect(() => {
@@ -32,13 +31,12 @@ export function Reveal({ children, delay = 0, className = "", as: Tag = "div" }:
   const style: CSSProperties = { transitionDelay: `${delay}ms` };
 
   return (
-    // @ts-expect-error – dynamic tag
-    <Tag
+    <div
       ref={ref}
       style={style}
       className={`reveal ${visible ? "is-visible" : ""} ${className}`}
     >
       {children}
-    </Tag>
+    </div>
   );
 }
