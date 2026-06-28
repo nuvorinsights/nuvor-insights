@@ -12,6 +12,5 @@ export default defineConfig({
     // SPA mode: emit a static index.html shell that hydrates on the client.
     // No SSR at runtime; output is fully static for GitHub Pages.
     spa: { enabled: true },
-    prerender: { enabled: true },
   },
 });
