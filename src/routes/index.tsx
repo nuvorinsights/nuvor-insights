@@ -258,7 +258,7 @@ const SERVICES = [
     title: "Cash Flow Risk Assessment",
     desc: "Forward-looking visibility into liquidity, payroll pressure and short-term risk.",
     bullets: [
-      "30–60 day forecasting",
+      "30 day forecasting",
       "Payroll impact",
       "Cash pressure",
       "Liquidity monitoring",
@@ -554,7 +554,7 @@ function AboutSection() {
 const FAQS = [
   {
     q: "Who is this service designed for?",
-    a: "Founders and leadership teams of marketing and creative agencies, typically 10–50 employees, who want executive-level financial visibility beyond what their bookkeeper or accountant currently provides.",
+    a: "Founders and leadership teams of marketing and creative agencies, with at least 10–50 employees, who want executive-level financial visibility beyond what their bookkeeper or accountant currently provides.",
   },
   {
     q: "What financial information do you require?",
