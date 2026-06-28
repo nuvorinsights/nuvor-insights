@@ -1,4 +1,4 @@
-import logo from "@/assets/nuvor-logo.asset.json";
+import logoUrl from "@/assets/nuvor-logo.png";
 
 interface LogoProps {
   variant?: "dark" | "light";
@@ -11,7 +11,7 @@ export function Logo({ variant = "dark", showWordmark = true, className = "" }: 
   return (
     <div className={`flex items-center gap-2.5 ${className}`}>
       <img
-        src={logo.url}
+        src={logoUrl}
         alt="Nuvor Insights"
         className={`h-8 w-8 object-contain ${variant === "light" ? "invert brightness-0" : ""}`}
         style={variant === "light" ? { filter: "invert(1) brightness(2)" } : undefined}
