@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Mail } from "lucide-react";
 import { Logo } from "./Logo";
 
 export function SiteFooter() {
@@ -6,7 +6,7 @@ export function SiteFooter() {
   return (
     <footer className="border-t border-white/10 bg-[color:var(--navy)] text-white/80">
       <div className="container-px mx-auto max-w-7xl py-16">
-        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr_1fr] md:gap-16">
+        <div className="grid gap-10 md:grid-cols-[1.4fr_1fr] md:gap-16">
           <div>
             <Logo variant="light" />
             <p className="mt-5 max-w-sm text-sm leading-relaxed text-white/60">
@@ -36,18 +36,6 @@ export function SiteFooter() {
             </ul>
           </div>
 
-          <div>
-            <p className="eyebrow-light mb-4">Connect</p>
-            <a
-              href="https://www.linkedin.com"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="LinkedIn"
-              className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 transition-all hover:border-[color:var(--gold)] hover:text-[color:var(--gold)]"
-            >
-              <Linkedin className="h-4 w-4" />
-            </a>
-          </div>
         </div>
 
         <div className="mt-14 flex flex-col gap-3 border-t border-white/10 pt-6 text-xs text-white/50 md:flex-row md:items-center md:justify-between">
