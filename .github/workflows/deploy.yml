@@ -29,7 +29,13 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Compute base path
+        id: base
+        run: echo "base=/${GITHUB_REPOSITORY#*/}/" >> "$GITHUB_OUTPUT"
+
       - name: Build
+        env:
+          BASE_PATH: ${{ steps.base.outputs.base }}
         run: bun run build
 
       - name: Upload artifact
